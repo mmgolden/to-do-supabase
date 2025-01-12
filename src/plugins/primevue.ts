@@ -7,6 +7,12 @@ export default {
     app.use(PrimeVue, {
       theme: {
         preset: Lara,
+        options: {
+          cssLayer: {
+            name: "primevue",
+            order: "reset, primevue",
+          },
+        },
       },
     });
   },
