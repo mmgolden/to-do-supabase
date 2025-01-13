@@ -1,14 +1,22 @@
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
-  </header>
-
-  <RouterView />
+  <component :is="layout">
+    <RouterView />
+  </component>
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
+import AuthenticatedLayout from "@/layouts/AuthenticatedLayout.vue";
+
+const route = useRoute();
+
+const layout = computed(() => {
+  if (route.meta.layout === "AuthenticatedLayout") {
+    return AuthenticatedLayout;
+  } else {
+    return DefaultLayout;
+  }
+});
 </script>

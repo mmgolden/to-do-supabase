@@ -6,4 +6,5 @@
 html,
 body {
   font-family: "Lato", serif;
+  background: var(--p-gray-50);
 }
