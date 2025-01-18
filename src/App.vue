@@ -23,4 +23,11 @@ const layout = computed(() => {
 
 <style lang="scss">
 @use "@/assets/scss/main" as *;
+
+html,
+body {
+  background: $p-gray-50;
+  color: $p-gray-900;
+  font-family: "Lato", serif;
+}
 </style>

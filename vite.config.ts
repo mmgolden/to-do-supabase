@@ -4,6 +4,9 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 import autoprefixer from "autoprefixer";
+import { generateVariables } from "./src/utils/generateVariables";
+// @ts-expect-error no declaration file
+import base from "@primevue/themes/lara/base";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -14,7 +17,9 @@ export default defineConfig({
       plugins: [autoprefixer()],
     },
     preprocessorOptions: {
-      scss: {},
+      scss: {
+        additionalData: `${generateVariables(base.primitive)}`,
+      },
     },
   },
 
