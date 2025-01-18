@@ -29,19 +29,19 @@ const email = ref("");
 const password = ref("");
 </script>
 
-<style scoped lang="postcss">
+<style scoped lang="scss">
 .sign-in {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   height: 100%;
+  justify-content: center;
 }
 
 .sign-in__card {
-  width: 100%;
   max-width: 40rem;
+  width: 100%;
 }
 
 .sign-in__form {

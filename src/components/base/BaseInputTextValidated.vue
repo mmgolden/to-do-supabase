@@ -31,7 +31,7 @@ defineOptions({
 });
 </script>
 
-<style scoped lang="postcss">
+<style scoped lang="scss">
 .input-text {
   display: flex;
   flex-direction: column;

@@ -17,7 +17,7 @@
 import { RouterLink } from "vue-router";
 </script>
 
-<style scoped lang="postcss">
+<style scoped lang="scss">
 .wrapper {
   display: flex;
   flex-direction: column;

@@ -12,7 +12,7 @@ export default {
           darkModeSelector: ".dark",
           cssLayer: {
             name: "primevue",
-            order: "reset, primevue",
+            order: "reset, primevue, base",
           },
         },
       },

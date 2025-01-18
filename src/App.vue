@@ -20,3 +20,7 @@ const layout = computed(() => {
   }
 });
 </script>
+
+<style lang="scss">
+@use "@/assets/scss/main" as *;
+</style>
