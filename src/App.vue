@@ -22,28 +22,5 @@ const layout = computed(() => {
 </script>
 
 <style lang="scss">
-@use "@/assets/scss/main" as *;
-
-html,
-body {
-  background: $p-gray-50;
-  color: $p-gray-900;
-  font-family: "Inter", serif;
-}
-
-a {
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: $p-indigo-600;
-  font-weight: 500;
-  text-decoration: none;
-
-  &:focus-visible {
-    border-color: $p-indigo-600;
-  }
-
-  &:hover {
-    color: $p-indigo-500;
-  }
-}
+@use "@/assets/scss/main";
 </style>

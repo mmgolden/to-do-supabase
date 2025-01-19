@@ -1,0 +1,7 @@
+@use "../utilities" as *;
+
+html,
+body {
+  background: $p-gray-50;
+  font-family: "Inter", serif;
+}

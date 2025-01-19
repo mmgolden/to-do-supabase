@@ -3,6 +3,7 @@
     <BaseCard class="sign-in__card">
       <template #content>
         <h1 class="sign-in__title">Welcome Back</h1>
+
         <form class="sign-in__form">
           <BaseInputTextValidated
             v-model="email"
@@ -11,6 +12,7 @@
             label="Email"
             placeholder="Email address"
           />
+
           <BaseInputTextValidated
             v-model="password"
             id="password"
@@ -18,8 +20,11 @@
             label="Password"
             placeholder="Password"
           />
+
           <RouterLink to="/" class="sign-in__forgot-password">Forgot password?</RouterLink>
+
           <BaseButton id="sign-in-button" type="submit" label="Sign in" class="sign-in__button" />
+
           <p class="sign-in__create-account">
             Don't have an account?
             <RouterLink to="/">Create today!</RouterLink>
@@ -45,7 +50,6 @@ const password = ref("");
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   height: 100%;
   justify-content: center;
 }
@@ -55,20 +59,22 @@ const password = ref("");
   width: 100%;
 }
 
+.sign-in__title {
+  margin-bottom: 2rem;
+  text-align: center;
+  @include header;
+}
+
 .sign-in__form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.sign-in__title {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
 .sign-in__forgot-password {
   align-self: flex-end;
   text-align: right;
+  @include link;
 }
 
 .sign-in__button {
@@ -78,5 +84,10 @@ const password = ref("");
 .sign-in__create-account {
   margin-top: 2rem;
   text-align: center;
+  @include body;
+
+  a {
+    @include link;
+  }
 }
 </style>

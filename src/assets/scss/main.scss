@@ -1,7 +1,8 @@
 @use "sass:meta";
+@use "base/base";
 
 @layer reset, primevue;
 
 @layer reset {
-  @include meta.load-css("reset");
+  @include meta.load-css("vendors/reset");
 }
