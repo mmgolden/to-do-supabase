@@ -6,7 +6,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 import autoprefixer from "autoprefixer";
 import { generateVariables } from "./src/utils/generateVariables";
 // @ts-expect-error no declaration file
-import base from "@primevue/themes/lara/base";
+import base from "@primevue/themes/aura/base";
 
 // https://vite.dev/config/
 export default defineConfig({

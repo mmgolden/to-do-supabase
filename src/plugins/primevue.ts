@@ -1,13 +1,32 @@
 import PrimeVue from "primevue/config";
-import Lara from "@primevue/themes/lara";
+import Aura from "@primevue/themes/aura";
+import { definePreset } from "@primevue/themes";
 import type { App } from "vue";
 import type { PrimeVueConfiguration } from "primevue/config";
 
 export default {
   install: (app: App) => {
+    const preset = definePreset(Aura, {
+      semantic: {
+        primary: {
+          50: "{indigo.50}",
+          100: "{indigo.100}",
+          200: "{indigo.200}",
+          300: "{indigo.300}",
+          400: "{indigo.400}",
+          500: "{indigo.500}",
+          600: "{indigo.600}",
+          700: "{indigo.700}",
+          800: "{indigo.800}",
+          900: "{indigo.900}",
+          950: "{indigo.950}",
+        },
+      },
+    });
+
     const options: PrimeVueConfiguration = {
       theme: {
-        preset: Lara,
+        preset,
         options: {
           darkModeSelector: ".dark",
           cssLayer: {

@@ -28,6 +28,6 @@ html,
 body {
   background: $p-gray-50;
   color: $p-gray-900;
-  font-family: "Lato", serif;
+  font-family: "Inter", serif;
 }
 </style>
