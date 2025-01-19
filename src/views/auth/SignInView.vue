@@ -18,11 +18,11 @@
             label="Password"
             placeholder="Password"
           />
-          <BaseLink to="/" class="sign-in__forgot-password">Forgot password?</BaseLink>
+          <RouterLink to="/" class="sign-in__forgot-password">Forgot password?</RouterLink>
           <BaseButton id="sign-in-button" type="submit" label="Sign in" class="sign-in__button" />
           <p class="sign-in__create-account">
             Don't have an account?
-            <BaseLink to="/">Create today!</BaseLink>
+            <RouterLink to="/">Create today!</RouterLink>
           </p>
         </form>
       </template>
@@ -35,7 +35,6 @@ import { ref } from "vue";
 import BaseCard from "@/components/base/BaseCard.vue";
 import BaseInputTextValidated from "@/components/base/BaseInputTextValidated.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
-import BaseLink from "@/components/base/BaseLink.vue";
 
 const email = ref("");
 const password = ref("");
@@ -68,6 +67,7 @@ const password = ref("");
 }
 
 .sign-in__forgot-password {
+  align-self: flex-end;
   text-align: right;
 }
 
