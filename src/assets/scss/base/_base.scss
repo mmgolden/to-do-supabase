@@ -2,6 +2,10 @@
 
 html,
 body {
-  background: $p-gray-50;
+  background: $p-zinc-50;
   font-family: "Inter", serif;
+
+  @include dark {
+    background: $p-zinc-950;
+  }
 }

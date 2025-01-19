@@ -28,7 +28,7 @@ export default {
       theme: {
         preset,
         options: {
-          darkModeSelector: ".dark",
+          darkModeSelector: ".dark-theme",
           cssLayer: {
             name: "primevue",
             order: "reset, primevue",

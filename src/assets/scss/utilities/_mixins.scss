@@ -1,18 +1,33 @@
 @use "primevue-variables" as *;
 @use "variables" as *;
 
+/* Dark mode */
+@mixin dark {
+  html.dark-theme & {
+    @content;
+  }
+}
+
 /* Body */
 @mixin body {
-  color: $p-gray-700;
+  color: $p-zinc-700;
   font-size: $font-16;
   font-weight: 400;
+
+  @include dark {
+    color: $p-zinc-300;
+  }
 }
 
 /* Headers */
 @mixin header {
-  color: $p-gray-900;
+  color: $p-zinc-900;
   font-size: $font-24;
   font-weight: 600;
+
+  @include dark {
+    color: $white;
+  }
 }
 
 /* Links */
@@ -30,5 +45,13 @@
 
   &:hover {
     color: $p-indigo-500;
+  }
+
+  @include dark {
+    color: $p-indigo-400;
+
+    &:hover {
+      color: $p-indigo-300;
+    }
   }
 }

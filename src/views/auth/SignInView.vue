@@ -32,6 +32,8 @@
         </form>
       </template>
     </BaseCard>
+
+    <BaseButton label="Toggle Dark Mode" @click="toggleDarkMode"></BaseButton>
   </div>
 </template>
 
@@ -43,6 +45,8 @@ import BaseButton from "@/components/base/BaseButton.vue";
 
 const email = ref("");
 const password = ref("");
+
+const toggleDarkMode = () => document.documentElement.classList.toggle("dark-theme");
 </script>
 
 <style scoped lang="scss">
@@ -50,6 +54,7 @@ const password = ref("");
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   height: 100%;
   justify-content: center;
 }
