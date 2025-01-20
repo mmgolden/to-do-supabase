@@ -50,6 +50,10 @@
   @include dark {
     color: $p-indigo-400;
 
+    &:focus-visible {
+      border-color: $p-indigo-400;
+    }
+
     &:hover {
       color: $p-indigo-300;
     }

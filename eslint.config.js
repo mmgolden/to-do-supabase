@@ -16,4 +16,18 @@ export default [
   ...pluginVue.configs["flat/strongly-recommended"],
   ...vueTsEslintConfig(),
   skipFormatting,
+  {
+    rules: {
+      "vue/html-self-closing": [
+        "error",
+        {
+          html: {
+            void: "never",
+            normal: "always",
+            component: "always",
+          },
+        },
+      ],
+    },
+  },
 ];

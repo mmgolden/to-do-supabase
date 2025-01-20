@@ -1,10 +1,10 @@
 <template>
-  <div class="sign-in">
-    <h1 class="sign-in__title">Sign in to your account</h1>
+  <div class="sign-up">
+    <h1 class="sign-up__title">Sign up for an account</h1>
 
-    <BaseCard class="sign-in__card">
+    <BaseCard class="sign-up__card">
       <template #content>
-        <form class="sign-in__form">
+        <form class="sign-up__form">
           <BaseInputTextValidated v-model="email" id="email" type="email" label="Email" />
 
           <BaseInputTextValidated
@@ -14,11 +14,11 @@
             label="Password"
           />
 
-          <BaseButton id="sign-in-button" type="submit" label="Sign in" class="sign-in__button" />
+          <BaseButton id="sign-up-button" type="submit" label="Sign up" class="sign-up__button" />
 
-          <p class="sign-in__account">
-            Don't have an account?
-            <RouterLink :to="{ name: 'SignUp' }">Create an account</RouterLink>
+          <p class="sign-up__account">
+            Already have an account?
+            <RouterLink :to="{ name: 'SignIn' }">Sign in</RouterLink>
           </p>
         </form>
       </template>
@@ -37,7 +37,7 @@ const password = ref("");
 </script>
 
 <style scoped lang="scss">
-.sign-in {
+.sign-up {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -46,27 +46,27 @@ const password = ref("");
   justify-content: center;
 }
 
-.sign-in__card {
+.sign-up__card {
   max-width: 32rem;
   width: 100%;
 }
 
-.sign-in__title {
+.sign-up__title {
   text-align: center;
   @include header;
 }
 
-.sign-in__form {
+.sign-up__form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.sign-in__button {
+.sign-up__button {
   margin-top: 0.5rem;
 }
 
-.sign-in__account {
+.sign-up__account {
   margin-top: 2rem;
   text-align: center;
   @include body;
