@@ -1,5 +1,6 @@
 const SignInView = () => import("./SignInView.vue");
 const SignUpView = () => import("./SignUpView.vue");
+const SignOutView = () => import("./SignOutView.vue");
 
 const authRoutes = [
   {
@@ -15,6 +16,15 @@ const authRoutes = [
     name: "SignUp",
     path: "/signup",
     component: SignUpView,
+    meta: {
+      layout: "DefaultLayout",
+    },
+  },
+
+  {
+    name: "SignOut",
+    path: "/signout",
+    component: SignOutView,
     meta: {
       layout: "DefaultLayout",
     },
