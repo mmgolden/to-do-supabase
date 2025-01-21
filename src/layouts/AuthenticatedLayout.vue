@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="header">
-      <BaseMenubar :model="items">
+      <BaseMenubar :model="items" class="menubar">
         <template #item="{ item, props }">
           <RouterLink v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
             <a :href="href" v-bind="props.action" @click="navigate">
@@ -10,7 +10,7 @@
           </RouterLink>
         </template>
         <template #end>
-          <BaseButton label="Toggle Dark Mode" @click="toggleDarkMode" />
+          <BaseButton label="Toggle dark mode" severity="secondary" @click="toggleDarkMode" />
         </template>
       </BaseMenubar>
     </header>
@@ -31,7 +31,7 @@ const items = ref([
     route: { name: "Home" },
   },
   {
-    label: "Sign Out",
+    label: "Sign out",
     route: { name: "SignOut" },
   },
 ]);
@@ -50,8 +50,12 @@ const toggleDarkMode = () => document.documentElement.classList.toggle("dark-the
   padding: 1rem;
 }
 
+.menubar {
+  @include container;
+}
+
 .main {
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
 }
 </style>

@@ -15,3 +15,9 @@
 <script setup lang="ts">
 import Menubar from "primevue/menubar";
 </script>
+
+<style scoped lang="scss">
+.p-menubar {
+  border: none;
+}
+</style>

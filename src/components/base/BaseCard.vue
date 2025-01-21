@@ -21,3 +21,9 @@
 <script setup lang="ts">
 import Card from "primevue/card";
 </script>
+
+<style scoped lang="scss">
+.p-card {
+  box-shadow: none;
+}
+</style>
